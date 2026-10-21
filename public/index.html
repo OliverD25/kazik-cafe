@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kazik Coffee — Хмельницький</title>
+<meta name="description" content="Kazik — кав'ярня у Хмельницькому. Спешелті-кава, десерти, сніданки та кава з собою. Бронювання столика і кава на подію.">
+<meta property="og:title" content="Kazik Coffee — Хмельницький">
+<meta property="og:description" content="Кава, заради якої варто зайти.">
+<meta property="og:image" content="assets/photos/hero.jpg">
+<meta property="og:locale" content="uk_UA">
+<meta name="theme-color" content="#ec3013">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#top" class="logo">KAZIK<span>.</span>COFFEE</a>
+    <div class="nav__links">
+      <a href="#about">Про нас</a>
+      <a href="locations.html">Кав'ярні на карті</a>
+    </div>
+    <a href="#form" class="btn btn--red btn--sm">Залишити заявку →</a>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <section class="hero">
+    <div class="hero__text">
+      <span class="eyebrow">Кав'ярня · Хмельницький</span>
+      <h1 class="hero__title">
+        <span>Кава, заради</span>
+        <span>якої варто</span>
+        <span class="accent">зайти.</span>
+      </h1>
+      <p class="lead">Kazik — маленька кав'ярня з великою любов'ю до зерна. Заходьте на еспресо дорогою на роботу, лишайтеся на довгу розмову або замовте каву для своєї події.</p>
+      <div class="hero__actions">
+        <a href="#form" class="btn btn--red btn--lg">Залишити заявку →</a>
+        <a href="https://www.instagram.com/kazik_coffee/" target="_blank" rel="noopener" class="btn btn--outline btn--lg">@kazik_coffee</a>
+      </div>
+    </div>
+    <figure class="photo photo--hero">
+      <img src="assets/photos/hero.jpg" alt="Бариста за стійкою кав'ярні Kazik" data-placeholder="Фото: бариста за стійкою / чашка кави">
+    </figure>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="about" class="about">
+    <span class="eyebrow">Що в нас є</span>
+    <div class="feature">
+      <div class="feature__num"><i class="dot"></i>01</div>
+      <h2>Спешелті-кава</h2>
+      <p>Еспресо, фільтр і молочні напої на свіжообсмаженому зерні. Бариста підкаже, що спробувати сьогодні.</p>
+    </div>
+    <div class="feature">
+      <div class="feature__num"><i class="dot"></i>02</div>
+      <h2>Десерти й сніданки</h2>
+      <p>Щось солодке до капучино або ситне до ранкової кави — асортимент змінюється, тож слідкуйте в Instagram.</p>
+    </div>
+    <div class="feature">
+      <div class="feature__num"><i class="dot"></i>03</div>
+      <h2>Кава з собою</h2>
+      <p>Швидко, гаряче і без черги — беріть улюблений напій дорогою на роботу чи на прогулянку містом.</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <figure class="photo"><img src="assets/photos/g1.jpg" alt="Інтер'єр кав'ярні" loading="lazy" data-placeholder="Фото: інтер'єр"></figure>
+    <figure class="photo"><img src="assets/photos/g2.jpg" alt="Латте-арт" loading="lazy" data-placeholder="Фото: латте-арт"></figure>
+    <figure class="photo"><img src="assets/photos/g3.jpg" alt="Десерти" loading="lazy" data-placeholder="Фото: десерти"></figure>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="form" class="request">
+    <div class="request__intro">
+      <span class="eyebrow">Заявка</span>
+      <h2 class="request__title">
+        <span>Напишіть нам.</span>
+        <span>Ми передзвонимо.</span>
+      </h2>
+      <p>Забронювати столик, замовити каву на подію чи домовитися про співпрацю — залиште контакти, і ми зв'яжемося з вами впродовж дня.</p>
+    </div>
+
+    <div class="request__done" id="done" hidden>
+      <div class="feature__num"><i class="dot"></i>Заявку надіслано</div>
+      <p class="request__thanks">Дякуємо<span id="done-name"></span>! Скоро наберемо вас.</p>
+      <button type="button" class="btn btn--outline btn--sm" id="reset">Нова заявка</button>
+    </div>
+
+    <form class="request__form" id="request-form" novalidate>
+      <input type="hidden" name="type" value="table">
+      <div class="field">
+        <span class="field__label">Мета звернення</span>
+        <div class="tabs" role="radiogroup" aria-label="Мета звернення">
+          <button type="button" role="radio" aria-checked="true" data-type="table">Столик</button>
+          <button type="button" role="radio" aria-checked="false" data-type="event">Кава на подію</button>
+          <button type="button" role="radio" aria-checked="false" data-type="collab">Співпраця</button>
+        </div>
+      </div>
+      <div class="row row--2">
+        <label class="field">Ім'я
+          <input name="name" required autocomplete="name" placeholder="Як до вас звертатися"></label>
+        <label class="field">Телефон
+          <input name="phone" type="tel" required autocomplete="tel" placeholder="+380"></label>
+      </div>
+      <div class="row row--3" id="booking">
+        <label class="field">Дата
+          <input name="date" type="date"></label>
+        <label class="field">Час
+          <input name="time" type="time"></label>
+        <label class="field"><span id="guests-label">Гостей</span>
+          <input name="guests" type="number" min="1" placeholder="2"></label>
+      </div>
+      <label class="field">Коментар
+        <textarea name="comment" rows="3" placeholder="Побажання до столика"></textarea></label>
+      <p class="form__error" id="form-error" hidden></p>
+      <button type="submit" class="submit"><span>Надіслати заявку</span><span>→</span></button>
+      <p class="fineprint">Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних для зворотного зв'язку.</p>
+    </form>
+  </section>
+</main>
+
+<section id="visit" class="visit">
+  <div class="visit__inner">
+    <h3 class="visit__title">
+      <span>Заходьте</span>
+      <span>на каву.</span>
+    </h3>
+    <div class="visit__info">
+      <div>
+        <span class="visit__label">Адреса</span>
+        <span class="visit__value"><a href="locations.html">6 кав'ярень у Хмельницькому →</a></span>
+      </div>
+      <div>
+        <span class="visit__label">Години</span>
+        <!-- TODO: справжні години роботи -->
+        <span class="visit__value">Пн–Нд, —:— – —:—</span>
+      </div>
+      <a href="https://www.instagram.com/kazik_coffee/" target="_blank" rel="noopener" class="visit__ig"><span>Instagram · @kazik_coffee</span><span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Kazik Coffee, Хмельницький</span>
+  <a href="#top">Нагору ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

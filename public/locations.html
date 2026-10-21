@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kazik Coffee — наші кав'ярні на карті</title>
+<meta name="description" content="Адреси та години роботи кав'ярень Kazik Coffee у Хмельницькому, на карті, з маршрутом у Google Maps.">
+<meta property="og:title" content="Kazik Coffee — наші кав'ярні на карті">
+<meta property="og:image" content="assets/photos/hero.jpg">
+<meta property="og:locale" content="uk_UA">
+<meta name="theme-color" content="#ec3013">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="./" class="logo">KAZIK<span>.</span>COFFEE</a>
+    <div class="nav__links">
+      <a href="./#about">Про нас</a>
+      <a href="locations.html" aria-current="page">Кав'ярні на карті</a>
+    </div>
+    <a href="./#form" class="btn btn--red btn--sm">Залишити заявку →</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="loc-head">
+    <span class="eyebrow">Наші кав'ярні · Хмельницький</span>
+    <h1 class="loc-head__title"><span>Kazik є поруч.</span><span class="accent">Обирайте свій.</span></h1>
+    <p class="lead">Оберіть адресу у списку, щоб побачити її на карті, або натисніть на мітку. «Маршрут» відкриває навігацію в Google Maps.</p>
+  </header>
+  <div class="loc-grid">
+    <ul class="loc-list" id="list"></ul>
+    <div id="map" role="region" aria-label="Карта кав'ярень Kazik Coffee"></div>
+  </div>
+</main>
+
+<footer class="footer footer--rule">
+  <span>© 2026 Kazik Coffee, Хмельницький · <a href="tel:+380965335906">+380 96 533 59 06</a></span>
+  <a href="https://www.instagram.com/kazik_coffee/" target="_blank" rel="noopener">Instagram · @kazik_coffee ↗</a>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<script src="locations.js"></script>
+</body>
+</html>
